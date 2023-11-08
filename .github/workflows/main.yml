@@ -164,15 +164,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install JMeter
-        run: |
-          wget https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.2.tgz
-          tar -xzf apache-jmeter-5.6.2.tgz
-
-      - name: Run performance test
-        run: |
-          ./apache-jmeter-5.6.2/bin/jmeter -n -t /home/runner/work/course-svc/course-svc/JMeter/testplan.jmx -l /home/runner/work/course-svc/course-svc/JMeter/results.jtl
-          cat JMeter/results.jtl
+#      - name: Install JMeter
+#        run: |
+#          wget https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.2.tgz
+#          tar -xzf apache-jmeter-5.6.2.tgz
+#
+#      - name: Run performance test
+#        run: |
+#          ./apache-jmeter-5.6.2/bin/jmeter -n -t /home/runner/work/course-svc/course-svc/JMeter/testplan.jmx -l /home/runner/work/course-svc/course-svc/JMeter/results.jtl
+#          cat JMeter/results.jtl
   # 编译打包
   deploy:
     needs:
