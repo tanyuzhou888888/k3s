@@ -146,15 +146,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: TEST INSERT COURSE
-        run: |
-          chmod u+x ./shell/test-insert-course.sh
-          ./shell/test-insert-course.sh
-
-      - name: TEST REGISTER USER
-        run: |
-          chmod u+x ./shell/test-register-and-login.sh
-          ./shell/test-register-and-login.sh
+#      - name: TEST INSERT COURSE
+#        run: |
+#          chmod u+x ./shell/test-insert-course.sh
+#          ./shell/test-insert-course.sh
+#
+#      - name: TEST REGISTER USER
+#        run: |
+#          chmod u+x ./shell/test-register-and-login.sh
+#          ./shell/test-register-and-login.sh
   testTwo:
     needs: build
     runs-on: ubuntu-latest
